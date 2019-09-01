@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %}
+
+<div id="home">
+  <div id="section">
+    <h2 class="white-text">Fortnite Statistics Tracker</h2>
+    <br /><br />
+    <h4 class="white-text">Enter Details</h4>
+    <div class="row">
+      <form action="stats" class="col s12 center" method="GET">
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input
+              id="user_name"
+              name="user_name"
+              type="text"
+              class="validate white-text"
+            />
+            <label for="user_name" class="white-text">Username</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <select name="platform">
+              <option value="" disabled selected
+                ><span class="white-text">Choose your Platform</span></option
+              >
+              <option value="pc">PC</option>
+              <option value="ps4">Playstation</option>
+              <option value="xbox">XBOX</option>
+              <option value="ios">IPhones</option>
+              <option value="android">Android Phones</option>
+            </select>
+          </div>
+          <button class="btn indigo darken-4 hoverable" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock%}
